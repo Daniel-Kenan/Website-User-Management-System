@@ -3,7 +3,7 @@ import smtplib
 from email.message import EmailMessage
 import easyimap as e
 
-class mailing_system:
+class initialise:
     
     def __init__(self,email, password):
         self.password = password
@@ -20,7 +20,7 @@ class mailing_system:
         msg["Subject"] = Subject
         msg["To"] = To
         msg.set_content(Body)
-
+    
         with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
               smtp.login(self.email,self.password)
               smtp.send_message(msg)
@@ -28,4 +28,3 @@ class mailing_system:
 
 
 
-# account.mail(To = 'sdanielkenan@gmail.com' , Subject = "hello", Body ="hello world")
