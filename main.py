@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from configure import file
 import os 
+from time import sleep
 
 email = 'accdemo44@gmail.com'
 pasword = os.environ.get('PASSWORDPORTFOLIO')
@@ -33,3 +34,26 @@ class WUMS:
        
        for email in  file():
            account.sendMail(To = email , Subject = "hello", Body = self.htmlContent)
+
+    def watch(self,url):
+        # varialble = 
+        while True:
+           if url.status_code  == 200:
+
+               pass
+            #   email website is down ND PROVIDES time  
+           else:
+               pass
+            # website is up and running   
+        sleep(5000)   
+
+    def urlPublish():
+        # publish data of the site
+        pass
+
+    def scrape(url):
+        # scrape website and send the data by email if email or store data on the txt
+        pass
+
+    def pdfSite():
+        pass
